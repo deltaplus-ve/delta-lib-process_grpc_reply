@@ -1,8 +1,8 @@
 {
   "name": "delta-lib-process_grpc_reply",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Processes the grpc reply and envelops it in the appropriate message format for deltaFlow grpc calls.",
-  "main": "index.js",
+  "main": "delta-lib-process_grpc_reply.js",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
