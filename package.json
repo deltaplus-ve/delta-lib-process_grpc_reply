@@ -1,0 +1,16 @@
+{
+  "name": "delta-lib-process_grpc_reply",
+  "version": "0.1.0",
+  "description": "Processes the grpc reply and envelops it in the appropriate message format for deltaFlow grpc calls.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git-codecommit.us-east-1.amazonaws.com/v1/repos/delta-lib-process_grpc_reply"
+  },
+  "author": "Beto",
+  "license": "Deltaplus Soluciones C.A. (c) 2016"
+}
