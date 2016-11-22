@@ -2,6 +2,12 @@
 
 Library to easily envelope a gRPC reply in the right message format.
 
+# Installation
+
+```code
+npm install --save git+ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/delta-lib-process_grpc_reply
+```
+
 # Usage
 
 ```code
