@@ -24,7 +24,8 @@ var processReply = function(callback) {
       (typeof data === 'string' || data instanceof String) ? data : JSON.stringify(data)));
     else {
       console.log(this.senderName + " error: ", JSON.stringify(error));
-      callCallbackWithReplyMessage(callback, createReplyMessage(-1, "Error", JSON.stringify(error)));
+      callCallbackWithReplyMessage(callback, createReplyMessage(-1, "Error",
+        (typeof data === 'string' || data instanceof String) ? data : JSON.stringify(data)));
     }
   };
 };
