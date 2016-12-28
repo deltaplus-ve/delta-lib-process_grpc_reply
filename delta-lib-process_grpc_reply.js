@@ -10,12 +10,12 @@ var createReplyMessage = function(code, message, data){
 };
 
 var callCallbackWithReplyMessage = function(callback, replyMessage){
+  console.log(this.senderName + " - replyMessage: ", replyMessage);
   callback(null, replyMessage);
 };
 
 var processReply = function(callback) {
   return function(error, data) {
-    console.log(this.senderName + " - data: ", JSON.stringify(data));
     if (data && data.code && data.message && data.data && data.module){
       //Received data is in an envelope. We need to extract the data.
       data = data.data;
