@@ -20,7 +20,8 @@ var processReply = function(callback) {
       //Received data is in an envelope. We need to extract the data.
       data = data.data;
     }
-    if (!error) callCallbackWithReplyMessage(callback, createReplyMessage(1, "Successful", JSON.stringify(data)));
+    if (!error) callCallbackWithReplyMessage(callback, createReplyMessage(1, "Successful",
+      (typeof data === 'string' || data instanceof String) ? data : JSON.stringify(data)));
     else {
       console.log(this.senderName + " error: ", JSON.stringify(error));
       callCallbackWithReplyMessage(callback, createReplyMessage(-1, "Error", JSON.stringify(error)));
