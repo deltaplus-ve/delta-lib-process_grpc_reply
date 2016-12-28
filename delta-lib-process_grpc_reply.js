@@ -15,7 +15,7 @@ var callCallbackWithReplyMessage = function(callback, replyMessage){
 
 var processReply = function(callback) {
   return function(error, data) {
-    if (data.code && data.message && data.data && data.module){
+    if (data && data.code && data.message && data.data && data.module){
       //Received data is in an envelope. We need to extract the data.
       data = data.data;
     }
