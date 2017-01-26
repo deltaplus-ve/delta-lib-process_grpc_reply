@@ -40,7 +40,10 @@ var processReply = function(callback, mode) {
     }
     else {
       console.log(this.senderName + " error: ", JSON.stringify(error));
-      callCallbackWithReplyMessage(callback, createMessage(-1, "Error: " + error,
+      mode === 2 ?
+        callCallbackWithReplyMessageOnFirstArgument(callback, createMessage(-1, "Error: " + error,
+          (typeof data === 'string' || data instanceof String) ? data : JSON.stringify(data)));
+      : callCallbackWithReplyMessageOnSecondArgument(callback, createMessage(-1, "Error: " + error,
         (typeof data === 'string' || data instanceof String) ? data : JSON.stringify(data)));
     }
   };
