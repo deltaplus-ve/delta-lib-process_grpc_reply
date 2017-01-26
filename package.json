@@ -1,6 +1,6 @@
 {
   "name": "delta-lib-process_grpc_reply",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Processes the grpc reply and envelops it in the appropriate message format for deltaFlow grpc calls.",
   "main": "delta-lib-process_grpc_reply.js",
   "private": true,
