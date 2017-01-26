@@ -12,7 +12,9 @@ npm install --save git+ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/del
 
 ```code
 var my_proto = grpc.load('../protos/my_proto.proto');
-var processGrpcReply = require('delta-lib-process_grpc_reply')('Your module name');
+var grpcReply = require('delta-lib-process_grpc_reply')('Your module name');
+var processGrpcReply = grpcReply.processReply;
+var createGrpcMessage = grpcReply.createMessage;
 
 var server = new grpc.Server();
 server.addProtoService(my_proto.my_package.my_service.service, {

@@ -1,3 +1,9 @@
+/* Copyright (C) Deltaplus Soluciones C.A. - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * This software is proprietary
+ * Written by Alberto Güerere <alberto.guerere@deltapl.us>, Jan 2017
+ */
+
 var senderName = "";
 
 var createMessage = function(code, message, data){
