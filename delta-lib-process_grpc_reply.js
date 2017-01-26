@@ -42,9 +42,9 @@ var processReply = function(callback, mode) {
       console.log(this.senderName + " error: ", JSON.stringify(error));
       mode === 2 ?
         callCallbackWithReplyMessageOnFirstArgument(callback, createMessage(-1, "Error: " + error,
-          (typeof data === 'string' || data instanceof String) ? data : JSON.stringify(data)));
+          (typeof data === 'string' || data instanceof String) ? data : JSON.stringify(data)))
       : callCallbackWithReplyMessageOnSecondArgument(callback, createMessage(-1, "Error: " + error,
-        (typeof data === 'string' || data instanceof String) ? data : JSON.stringify(data)));
+          (typeof data === 'string' || data instanceof String) ? data : JSON.stringify(data)));
     }
   };
 };
