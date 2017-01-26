@@ -1,6 +1,6 @@
 var senderName = "";
 
-var createReplyMessage = function(code, message, data){
+var createMessage = function(code, message, data){
   return {
     code: code,
     module: this.senderName,
@@ -20,11 +20,11 @@ var processReply = function(callback) {
       //Received data is in an envelope. We need to extract the data.
       data = data.data;
     }
-    if (!error) callCallbackWithReplyMessage(callback, createReplyMessage(1, "Successful",
+    if (!error) callCallbackWithReplyMessage(callback, createMessage(1, "Successful",
       (typeof data === 'string' || data instanceof String) ? data : JSON.stringify(data)));
     else {
       console.log(this.senderName + " error: ", JSON.stringify(error));
-      callCallbackWithReplyMessage(callback, createReplyMessage(-1, "Error",
+      callCallbackWithReplyMessage(callback, createMessage(-1, "Error",
         (typeof data === 'string' || data instanceof String) ? data : JSON.stringify(data)));
     }
   };
@@ -32,5 +32,8 @@ var processReply = function(callback) {
 
 module.exports = function(senderName) {
   this.senderName = senderName;
-  return processReply;
-}
+  return {
+    processReply: processReply,
+    createMessage: createMessage
+  }
+};
