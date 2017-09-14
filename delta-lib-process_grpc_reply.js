@@ -11,7 +11,7 @@ var createMessage = function(code, message, data, context){
     code: code,
     module: this.senderName,
     message: message,
-    data: data || "{}" //data cannot be empty. If it is received empty, fill it with JSON empty object.
+    data: data || "{}", //data cannot be empty. If it is received empty, fill it with JSON empty object.
     context: context
   };
 };
